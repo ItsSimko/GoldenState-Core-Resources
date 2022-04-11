@@ -1,0 +1,127 @@
+p {
+    margin: 0 !important;
+}
+
+#refreshbutt, #discbutt, #createbutt {
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+#charselectbody {
+	background-image: url("https://gstrp.com/images/bg.jpg");
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	display:none;
+}
+
+#error {
+    background-color: red;
+    text-align: left;
+    padding: 10px 5px 10px 5px;
+    display: none;
+    font-weight: bold;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20vh;
+	width: 20vh;
+}
+
+#welcometext {
+    display: block;
+    margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+    font-family: 'Karantina', cursive;
+    font-size: 8vh;
+	color: black;
+}
+
+#discordtext {
+    display: block;
+    margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+    font-family: 'Karantina', cursive;
+    font-size: 5vh;
+	color: black;
+}
+
+#menu{
+    position: absolute;
+    max-width: 28vw;
+    width: 26.5vw;
+    max-height:38%!important;
+    overflow-y: auto;
+    left:50%;
+    top:42%;
+    transform:translate(-50%, 0%);
+}
+
+.spawnbuttons {
+    width: 100%;
+    margin-bottom: 2.5px;
+    margin-top: 2.5px;
+}
+
+.modal-edits {
+    display: none;
+    background-color: #333333ff !important;
+    border: 6px solid !important;
+    border-radius: 5px !important;
+    border-color: #1f1f1fff !important;
+    color: white;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+#new-char-prompt {
+    Overflow: hidden;
+	font-family: sans-serif;
+    width: 57vw;
+	height: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+	margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+    background-color: #333333ff;
+    border: 6px solid;
+    border-radius: 5px;
+    border-color: #1f1f1fff;
+    color: white;
+    display: none;
+}
+
+.btn-primary {
+    background-color: green !important;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: rgb(71,71,71) !important;
+    border: none;
+}
+
+input, select, textarea{
+    color: #000 !important;
+}
+
+.btn-red {
+    background-color: red !important;
+}
+
+.btn-blue {
+    background-color: blue !important;
+}

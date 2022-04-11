@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="cf4a">
+        <img src="imgs/bg0.png">
+        <img src="imgs/bg1.png">
+        <img src="imgs/bg2.png">
+        <img src="imgs/bg3.png">
+        <img src="imgs/bg4.png">
+        <img src="imgs/bg5.png">
+        <img src="imgs/bg6.png">
+    </div>
+    <div id="content">
+        <img class="logo" src="https://gstrp.com/images/logo.png">
+		<p style="color: #dfdfdf98;font-size: 24px;text-align: center;">discord.gg/hZ5b7AuBbF</p>
+        <audio id="music" src="imgs/music.mp3" controls autoplay></audio>
+        </div>
+    </div>
+    <script>
+        var audio = document.getElementById("music");
+        console.log(audio);
+        audio.volume = 0.25;
+
+        document.onkeydown = function(event) {
+    switch (event.keyCode) {
+        case 38:
+            event.preventDefault();
+            audio_vol = audio.volume;
+            if (audio_vol!=1) {
+            try {
+                audio.volume = audio_vol + 0.02;
+            }
+            catch(err) {
+                audio.volume = 1;
+            }
+            
+            }
+        break;
+        case 40:
+            event.preventDefault();
+            audio_vol = audio.volume;
+            if (audio_vol!=0) {
+            try {
+                audio.volume = audio_vol - 0.02;
+            }
+            catch(err) {
+                audio.volume = 0;
+            }
+            
+            }
+        break;
+        case 32:
+            audio.muted = !audio.muted;
+        break;
+    }
+};
+const handlers = {
+    startInitFunctionOrder(data) {
+        count = data.count;
+
+        document.querySelector('.letni h3').innerHTML += [data.type][data.order - 1] || '';
+    },
+
+    initFunctionInvoking(data) {
+        document.querySelector('.yeet').style.left = '0%';
+        document.querySelector('.yeet').style.width = ((data.idx / count) * 100) + '%';
+    },
+
+    startDataFileEntries(data) {
+        count = data.count;
+
+        document.querySelector('.letni h3').innerHTML += "\u{1f358}";
+    },
+
+    performMapLoadFunction(data) {
+        ++thisCount;
+
+        document.querySelector('.yeet').style.left = '0%';
+        document.querySelector('.yeet').style.width = ((thisCount / count) * 100) + '%';
+    },
+
+    onLogLine(data) {
+        document.querySelector('.letni p').innerHTML = data.message + "..!";
+    }
+};
+
+window.addEventListener('message', function (e) {
+    (handlers[e.data.eventName] || function () { })(e.data);
+}); 
+
+      </script>
+</body>
