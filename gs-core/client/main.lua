@@ -13,6 +13,7 @@ RegisterNUICallback('registerChar', function(data, cb)
 end)
 
 RegisterNUICallback('deleteChar', function(data, cb)
+print("yuop"..json.encode{data})
     TriggerServerEvent('core:deleteChar', data)
     cb('ok')
 end)
@@ -115,9 +116,11 @@ AddEventHandler("core:MoneyHud", function(type)
 	end
 end)
 
-RegisterCommand('switchchar', function()
-	DoScreenFadeOut(1000)
-    TriggerServerEvent('core:getChars')
-	TriggerServerEvent('core:switchChar')
-end)
+for i=1, #cfg.SwitchCharCmds do
+	RegisterCommand(cfg.SwitchCharCmds[i], function()
+		DoScreenFadeOut(1000)
+		TriggerServerEvent('core:getChars')
+		TriggerServerEvent('core:switchChar')
+	end)
+end
 

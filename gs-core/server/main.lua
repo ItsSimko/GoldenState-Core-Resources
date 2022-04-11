@@ -74,8 +74,7 @@ AddEventHandler('core:getChars', function(type)
     MySQL.Async.fetchAll('SELECT * FROM characters WHERE steamhex = @ident',{
         ['@ident'] = playerIdentifier
     }, function(results)
-        if type == "refresh" then
-         
+        if type == "refresh" then         
             local discordItems = GetDiscordRoles(_src)
             local DeptsAllowed = {} 
 
@@ -108,7 +107,7 @@ AddEventHandler('core:getChars', function(type)
                 end
             end
 
-            TriggerClientEvent('core:openCharSelection', _src, json.encode(results), json.encode(discordItems))
+            TriggerClientEvent('core:openCharSelection', _src, json.encode(results), json.encode(DeptsAllowed))
         end
     end)
 end)
@@ -197,7 +196,7 @@ AddEventHandler('core:registerChar', function(charData)
             ['@accounts'] = json.encode{cash = cfg.startingCash, bank = cfg.startingBank}
         }, function(changes) end)
     else
-        TriggerClientEvent("core:sendNui", json.encode{type="error",errormsg=cfg.NoRegisterPerms})
+        TriggerClientEvent("core:sendNui", _src, json.encode{type="error",errormsg=cfg.NoRegisterPerms})
     end
 end)
 

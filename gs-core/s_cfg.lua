@@ -7,7 +7,14 @@ cfg.ServerName = "Golden State RP" -- Put your server name here
 
 cfg.DiscordChatLogs = true -- IF you want chat to be logged to a webhook
 cfg.DiscordChatWebhook = "" -- place the webhook of the channel for chat logs. 
-cfg.UseCustomChat = true -- use the custom chat format from the resource.
+
+cfg.UseCustomChat = true -- use the custom chat format from the resource, note chat script is open source for you to edit.
+cfg.GlobalMeCmd = "meglobal" -- command for the globalme command, on works if CustomChat is enabled
+cfg.TwitterCmd = "twt" -- command for the twitter command, on works if CustomChat is enabled
+cfg.OocCmd = "ooc" -- command for the out of charchter command, on works if CustomChat is enabled
+cfg.ChatCharacterName = true -- if true chat messages will be sent with the users framework name ie; ""John Doe: I love pizza!"
+
+
 
 cfg.startingBank = 25000 -- the amount players start with in da bank
 cfg.startingCash = 500 -- the amount of cash players start with

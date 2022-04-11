@@ -18,7 +18,7 @@ if cfg.UseCustomChat == true then
         end
     end)
 
-    RegisterCommand('twt', function(source, args, user)
+    RegisterCommand(cfg.TwitterCmd, function(source, args, user)
         local ply = Core.Player.getPlayerFromId(source)
         local plyInfo = ply.getActiveChar()
         TriggerClientEvent('chat:addMessage', -1, {
@@ -27,7 +27,7 @@ if cfg.UseCustomChat == true then
         })
     end, false)
 
-    RegisterCommand('meglobal', function(source, args, user)
+    RegisterCommand(cfg.GlobalMeCmd, function(source, args, user)
         local ply = Core.Player.getPlayerFromId(source)
         local plyInfo = ply.getActiveChar()
         TriggerClientEvent('chat:addMessage', -1,{
@@ -38,7 +38,7 @@ if cfg.UseCustomChat == true then
         })
     end)
 
-    RegisterCommand('ooc', function(source, args, user)
+    RegisterCommand(cfg.OocCmd, function(source, args, user)
         local ply = Core.Player.getPlayerFromId(source)
         local plyInfo = ply.getActiveChar()
         TriggerClientEvent('chat:addMessage', -1,{

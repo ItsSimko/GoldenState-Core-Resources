@@ -26,7 +26,7 @@ window.addEventListener('message', (event)=> {
   }
   if (data.type == "error"){
     $('#errorModal').modal("show");
-    $('#errorMsg').innerHTML(data.errorMsg);
+    $('#errorMsg').html(data.errormsg);
   }
 })
 
@@ -148,14 +148,14 @@ function toggleCreateNewChar() {
   }
 }
 
-document.getElementById("dismissEroor").onclick = function() {
+document.getElementById("dismissError").onclick = function() {
   $('#errorMsg').innerHTML('');
 } 
 
 document.getElementById("confirmedDel").onclick = function() {
   $.post("https://gs-core/deleteChar", JSON.stringify(deleteCharId))
   $('#delete-dialog').modal('hide');
-  setTimeout(() => { refresh(); }, 200);
+  setTimeout(() => { refresh(); }, 50);
   }
 
 function createChar() {

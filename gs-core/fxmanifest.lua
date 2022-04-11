@@ -11,14 +11,15 @@ files {
 }
 
 client_scripts {
+  'c_cfg.lua',
   'client/*.lua',
   'addons/**/client/*.lua'
 }
 
 server_scripts {
+  's_cfg.lua',
   '@mysql-async/lib/MySQL.lua',
   'server/*.lua',
-  'cfg.lua',
   'addons/**/server/*.lua'
 }
 
