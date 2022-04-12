@@ -60,12 +60,12 @@ function createPlayer(steamid, sid)
 	ply.money.addBank = function(amount)
         print(amount)
 		ply.Player.money.bank = ply.Player.money.bank + amount
-        TriggerClientEvent("core:SetStats",ply.serverId ,"BANK_BALANCE", ply.Player.money.bank)
+        TriggerClientEvent("core:SetStats", ply.serverId ,"BANK_BALANCE", ply.Player.money.bank)
 	end
 	
 	ply.money.removeBank = function(amount)
 		ply.Player.money.bank = ply.Player.money.bank - amount
-        TriggerClientEvent("core:SetStats",ply.serverId ,"BANK_BALANCE", ply.Player.money.bank)
+        TriggerClientEvent("core:SetStats", ply.serverId ,"BANK_BALANCE", ply.Player.money.bank)
 	end
 	
 

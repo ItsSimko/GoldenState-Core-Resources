@@ -88,7 +88,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
-local hudStatus = false
+local hudStatus = true
 
 RegisterNetEvent("core:MoneyHud")
 AddEventHandler("core:MoneyHud", function(type)

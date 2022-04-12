@@ -15,19 +15,21 @@ cfg.OocCmd = "ooc" -- command for the out of charchter command, on works if Cust
 cfg.ChatCharacterName = true -- if true chat messages will be sent with the users framework name ie; ""John Doe: I love pizza!"
 
 
-
+cfg.UseMoney = true -- toggles the economy/money aspect of the framework. The framework still ceates econonmy tables in case it is turned on to prevent errors.
 cfg.startingBank = 25000 -- the amount players start with in da bank
 cfg.startingCash = 500 -- the amount of cash players start with
+cfg.MoneyCmd = "money" -- the command so the player can view their balances, or "/MoneyCmd hud" to toggle the HUD on or off.
 
 -- This is the error presented when the player doesnt have the discord roles for the department and trys to play.
 cfg.FailedCharPermision = "It seems you have lost permission to play as this charachter. If you belive this is an error make sure you have discord connected. If problems continue contanct administration."
 
-cfg.NoRegisterPerms = "You do not have permission to regi"
+-- If a player trys to register as a department they shouldnt have, the error that will be displayed.
+cfg.NoRegisterPerms = "You do not have permission to register as the department selected, please refresh. If you belive this is an error make sure you have the corresponding discord roles, or contact administration."
 
 --message to be displayed when some one tries to connect without steam or discord connected.
 cfg.NoSteamorDiscord = "You do not have your steam or discord connected, please make sure steam & discord is open and attempt to open your game again. \n Error code: missing-steam-or-discord \n\n If you continue to have issues please join discord.gg/hZ5b7AuBbF and someone will be hapy to help."
 
-    --resources the framework should restart, when it self is restarted. Useful for scripts that use charadata, something like a chat script.
+    --resources the framework should restart, when it self is restarted. Useful for scripts that use charadata, something like a store script.
 cfg.resToRestart = {
     "",
     "",
@@ -43,7 +45,7 @@ cfg.Departments = {
         SpawnPoint = {
             {x=sumcord, y=sumcord, z=sumcord, label="Spawnpoint Label"}, 
             {x=sumcord2, y=sumcord2, z=sumcord2, label="Spawnpoint Label2"},
-        }, -- SPAWNPOINTS THAT WILL BE AVAILBLE FOR THE LOAD MENU
+        }, -- SPAWNPOINTS THAT WILL BE AVAILBLE FOR THE department
         DiscordRoleId = "Insert Discord ID if you want it to be whitelist or delete line for no white list", -- SELF EXPLANTORY
     },
     --]]
