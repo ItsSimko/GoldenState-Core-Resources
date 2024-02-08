@@ -1,4 +1,4 @@
-## About
+# About
 - This is the core resource the Golden State Fivem server used. Every line of code written by me!
 - Feel free to use, do not resell. Fork or make pull requests as needed.
 
