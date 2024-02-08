@@ -1,5 +1,5 @@
 # About
-- This is the core resource the Golden State Fivem server used. Every line of code written by me!
+- This is the core resource the Golden State Fivem server used. Every line of code written by me (Except where its not, credit in read me)!
 - Lots of work and hours went into these. I no longer play or create FiveM mods, however, can help! This where I learned to code after all.
 - Feel free to use it; do not resell it. Fork or make pull requests as needed.
 
